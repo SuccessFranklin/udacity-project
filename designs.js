@@ -31,6 +31,10 @@ function makeGrid(){
   
     table.on("click","td",function(){
 	  x = $('#colorPicker').val();
+	  if($(this).attr('style')){
+		  $(this).removeAttr('style')
+	  }else{
 	  $(this).css('background-color', x);
+	  }
       // Your code goes here!
     });
